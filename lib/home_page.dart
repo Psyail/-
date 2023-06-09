@@ -46,6 +46,7 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
             ),
+            backgroundColor: Color.fromARGB(255, 35, 23, 205),
             leading: Builder(
               builder: (context) {
                 return IconButton(

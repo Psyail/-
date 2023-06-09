@@ -20,6 +20,7 @@ class MyPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('내 정보'),
+        backgroundColor: Color.fromARGB(255, 35, 23, 205),
       ),
       body: Center(
         child: Column(

@@ -6,6 +6,7 @@ class HelpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('도움말'),
+        backgroundColor: Color.fromARGB(255, 35, 23, 205),
       ),
       body: ListView(
         padding: EdgeInsets.all(16.0),

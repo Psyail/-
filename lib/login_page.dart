@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Consumer<AuthService>(
       builder: (context, authService, child) {
-        User? user = authService.currentUser();
+        //User? user = authService.currentUser();
         return Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -35,14 +35,14 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 /// 현재 유저 로그인 상태
-                Center(
+                /*Center(
                   child: Text(
                     user == null ? "로그인해 주세요" : "${user.email}님 안녕하세요 👋",
                     style: TextStyle(
                       fontSize: 24,
                     ),
                   ),
-                ),
+                ),*/ //그림으로 대체예정
                 SizedBox(height: 32),
 
                 /// 이메일
