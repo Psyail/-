@@ -40,13 +40,15 @@ class _HomePageState extends State<HomePage> {
         User user = authService.currentUser()!;
         return Scaffold(
           appBar: AppBar(
-            title: Center(
+            /*title: Center(
               child: Text(
                 "버킷 리스트",
-                textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
               ),
-            ),
+            ),*/
+            title: Text("버킷리스트"),
             backgroundColor: Color.fromARGB(255, 35, 23, 205),
+            centerTitle: true,
             leading: Builder(
               builder: (context) {
                 return IconButton(
