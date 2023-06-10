@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                   textAlign: TextAlign.center,
               ),
             ),*/
-            title: Text("버킷리스트"),
+            title: Text("$userName 님의 버킷리스트"),
             backgroundColor: Color.fromARGB(255, 35, 23, 205),
             centerTitle: true,
             leading: Builder(
