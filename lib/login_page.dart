@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                 /// 현재 유저 로그인 상태
                 /*Center(
                   child: Text(
-                    user == null ? "로그인해 주세요" : "${user.email}님 안녕하세요 👋",
+                    user == null ? "로그인해 주세요" : "${user.email}님 안녕하세요 ",
                     style: TextStyle(
                       fontSize: 24,
                     ),
@@ -61,7 +61,10 @@ class _LoginPageState extends State<LoginPage> {
 
                 /// 로그인 버튼
                 ElevatedButton(
-                  child: Text("로그인", style: TextStyle(fontSize: 21)),
+                  child: Text(
+                    "로그인",
+                    style: TextStyle(fontSize: 21),
+                  ),
                   onPressed: () {
                     // 로그인 성공시 HomePage로 이동
                     // 로그인
@@ -112,6 +115,9 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     );
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 75, 18, 149),
+                  ),
                 ),
               ],
             ),
@@ -121,3 +127,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+// elevated 스타일 바꾸기
