@@ -91,6 +91,11 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     );
                   },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 75, 18, 149),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      )),
                 ),
 
                 /// 회원가입 버튼
@@ -117,6 +122,9 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 75, 18, 149),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
               ],
