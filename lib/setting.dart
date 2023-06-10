@@ -36,6 +36,37 @@ class SettingPage extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         children: [
           ListTile(
+            leading: Icon(Icons.info),
+            title: Text(
+              '공지사항',
+              style: TextStyle(
+                fontSize: 18.0,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Notice()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.help),
+            title: Text(
+              '도움말',
+              style: TextStyle(
+                fontSize: 18.0,
+                // fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HelpPage()),
+              );
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.logout),
             title: Text(
               '로그아웃',
@@ -85,22 +116,6 @@ class SettingPage extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: Icon(Icons.help),
-            title: Text(
-              '도움말',
-              style: TextStyle(
-                fontSize: 18.0,
-                // fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HelpPage()),
-              );
-            },
-          )
         ],
       ),
     );
