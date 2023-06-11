@@ -40,12 +40,6 @@ class _HomePageState extends State<HomePage> {
         User user = authService.currentUser()!;
         return Scaffold(
           appBar: AppBar(
-            /*title: Center(
-              child: Text(
-                "버킷 리스트",
-                  textAlign: TextAlign.center,
-              ),
-            ),*/
             title: Text("$userName 님의 버킷리스트"),
             backgroundColor: Color.fromARGB(255, 35, 23, 205),
             centerTitle: true,
@@ -191,6 +185,12 @@ class _HomePageState extends State<HomePage> {
                           jobController.clear();
                         }
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 18, 11, 138),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                      ),
                     ),
                   ],
                 ),
