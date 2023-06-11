@@ -11,7 +11,6 @@ import 'setting.dart';
 import 'auth_service.dart';
 import 'bucket_service.dart';
 
-//import 'mypage.dart';
 //import 'calendar_page.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -58,81 +57,66 @@ class _HomePageState extends State<HomePage> {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                DrawerHeader(
+                UserAccountsDrawerHeader(
                   decoration: BoxDecoration(
                     color: Colors.blue,
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CircleAvatar(
-                        // 유저 프로필 아이콘
-                        radius: 30,
-                        backgroundColor: Colors.white,
-                        child: Icon(Icons.person, size: 30, color: Colors.blue),
-                      ),
-                      SizedBox(height: 8),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '$userName 님',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
+                  accountName: Text(
+                    '$userName 님',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                  accountEmail: InkWell(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          String newName = userName;
+                          return AlertDialog(
+                            title: Text('프로필 변경'),
+                            content: TextField(
+                              onChanged: (value) {
+                                newName = value;
+                              },
+                              controller: TextEditingController(
+                                text: userName,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 8),
-                      InkWell(
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              String newName = userName;
-                              return AlertDialog(
-                                title: Text('프로필 변경'),
-                                content: TextField(
-                                  onChanged: (value) {
-                                    newName = value;
-                                  },
-                                  controller: TextEditingController(
-                                    text: userName,
-                                  ),
-                                ),
-                                actions: [
-                                  TextButton(
-                                    child: Text('수정'),
-                                    onPressed: () {
-                                      setState(() {
-                                        userName = newName;
-                                      });
-                                      Navigator.pop(context);
-                                    },
-                                  ),
-                                  TextButton(
-                                    child: Text('취소'),
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                  ),
-                                ],
-                              );
-                            },
+                            actions: [
+                              TextButton(
+                                child: Text('수정'),
+                                onPressed: () {
+                                  setState(() {
+                                    userName = newName;
+                                  });
+                                  Navigator.pop(context);
+                                },
+                              ),
+                              TextButton(
+                                child: Text('취소'),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                              ),
+                            ],
                           );
                         },
-                        child: Text(
-                          '프로필 변경',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
+                      );
+                    },
+                    child: Text(
+                      '프로필 변경',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        decoration: TextDecoration.underline,
                       ),
-                    ],
+                    ),
+                  ),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.person, size: 30, color: Colors.blue),
                   ),
                 ),
                 ListTile(
