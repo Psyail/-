@@ -32,13 +32,6 @@ class HelpPage extends StatelessWidget {
           Text('추가내용2'),
         ],
       ),
-      /*  floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //도움말 페이지 닫기
-          Navigator.pop(context);
-        },
-        // child: Icon(Icons.close),
-      ),*/
     );
   }
 }

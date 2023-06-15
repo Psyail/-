@@ -1,4 +1,3 @@
-//캘린더 페이지I
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -17,13 +16,6 @@ class _CalendarPageState extends State<CalendarPage> {
   DateTime? _selectedDay;
   int _bucketCount = 0;
   int _completedBucketCount = 0;
-/*  BucketService _bucketService = BucketService();
-
-  @override
-  void initState() {
-    super.initState();
-    _updateBucketListCounts(_focusedDay);
-  }*/
 
   @override
   Widget build(BuildContext context) {

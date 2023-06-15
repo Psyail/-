@@ -2,27 +2,7 @@ import 'package:bucket_list_with_firebase/auth_service.dart';
 import 'package:bucket_list_with_firebase/help_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-//import 'auth_service.dart';
 import 'login_page.dart';
-/*
-class SettingsPage extends StatefulWidget {
-  @override
-  _SettingsPageState createState() => _SettingsPageState();
-}
-
-class _SettingsPageState extends State<SettingsPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("설정"),
-      ),
-      body: Center(
-        child: Text("설정 페이지"),
-      ),
-    );
-  }
-}*/
 
 class SettingPage extends StatelessWidget {
   @override
@@ -72,16 +52,6 @@ class SettingPage extends StatelessWidget {
               '로그아웃',
               style: TextStyle(fontSize: 18.0),
             ),
-            /* onTap: () {
-              //로그아웃
-              context.read<AuthService>().signOut();
-
-              //로그인 페이지로 이동
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => LoginPage()),
-              );
-            },*/
             onTap: () {
               showDialog(
                 context: context,

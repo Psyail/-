@@ -1,3 +1,4 @@
+//최초 사용예정이었다가 사용하지 않게됨.
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
@@ -13,7 +14,7 @@ class BottomBar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.search),
-          label: 'S',
+          label: 'Setting',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),

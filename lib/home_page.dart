@@ -1,6 +1,4 @@
-//homepage.dart
 import 'package:bucket_list_with_firebase/calendar_page.dart';
-//import 'package:bucket_list_with_firebase/mypage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +9,6 @@ import 'setting.dart';
 import 'auth_service.dart';
 import 'bucket_service.dart';
 
-//import 'calendar_page.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 

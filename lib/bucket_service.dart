@@ -3,18 +3,6 @@ import 'package:flutter/material.dart';
 
 class BucketService extends ChangeNotifier {
   final bucketCollection = FirebaseFirestore.instance.collection('bucket');
-
-/*  Future<List<Map<String, dynamic>>> readByDate(DateTime selectedDate) async {
-    // 선택한 날짜에 해당하는 버킷리스트 정보 가져오기
-    QuerySnapshot snapshot =
-        await bucketCollection.where('date', isEqualTo: selectedDate).get();
-    List<Map<String, dynamic>> bucketList = snapshot.docs
-        .map((DocumentSnapshot document) =>
-            document.data() as Map<String, dynamic>)
-        .toList();
-    return bucketList;
-  }*/
-
   Future<List<Map<String, dynamic>>> getBucketListByDate(
       DateTime selectedDate) async {
     QuerySnapshot snapshot =
@@ -47,21 +35,6 @@ class BucketService extends ChangeNotifier {
         .get();
     return snapshot.docs.length;
   }
-
-//여기부터 추가내용( 캘린더 탭과 홈 연계 ) -> 잘 안되서 일단 주석처리
-  /* Future<int> getBucketListCountByDate(DateTime selectedDate) async {
-    QuerySnapshot snapshot =
-        await bucketCollection.where('date', isEqualTo: selectedDate).get();
-    return snapshot.docs.length;
-  }
-
-  Future<int> getCompletedBucketListCountByDate(DateTime selectedDate) async {
-    QuerySnapshot snapshot = await bucketCollection
-        .where('date', isEqualTo: selectedDate)
-        .where('isDone', isEqualTo: true)
-        .get();
-    return snapshot.docs.length;
-  }*/
 
   void create(String job, String uid) async {
     await bucketCollection.add({
